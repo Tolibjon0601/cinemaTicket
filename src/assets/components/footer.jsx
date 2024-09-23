@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="flex justify-around">
+    <div className="flex justify-around pt-[120px]">
       <ul>
         <li className="mb-[48px]">
           <img src="./image/footer_logo.svg" alt="" />
