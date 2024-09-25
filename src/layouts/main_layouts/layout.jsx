@@ -11,7 +11,7 @@ const MainLayout = () => {
       <Header />
       <div className="flex-grow">
         <Outlet />
-        <MySwiper/>
+
       </div>
       <MainSwiper />
       <Footer />

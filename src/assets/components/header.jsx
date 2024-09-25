@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="py-[22px] flex items-center justify-between">
       <div className="ml-20">
-        <img src="./image/header_logo.svg" alt="Company Logo" />
+       <Link to=""> <img src="./image/header_logo.svg" alt="Company Logo" /></Link>
       </div>
       <nav>
         <ul className="flex space-x-4">
