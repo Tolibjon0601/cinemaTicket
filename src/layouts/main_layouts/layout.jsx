@@ -13,7 +13,7 @@ const MainLayout = () => {
         <Outlet />
 
       </div>
-      <MainSwiper />
+      {/* <MainSwiper /> */}
       <Footer />
     </div>
   );

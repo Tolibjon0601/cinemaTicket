@@ -20,10 +20,7 @@ const LoginPage = () => {
         </InputMask>
 
         <Link to="/authPage">
-          <button
-            type="button" // Prevents form submission
-            className="py-4 px-[176px] bg-main_color rounded-xl text-xl mb-6 font-medium"
-          >
+          <button className="py-4 px-[176px] bg-main_color rounded-xl text-xl mb-6 font-medium">
             Регистрация
           </button>
         </Link>
@@ -31,10 +28,7 @@ const LoginPage = () => {
 
       <p className="text-[#777] font-normal text-lg mb-6">или</p>
       <div className="flex justify-center gap-2">
-        <button
-          className="facebook_btn bg-[#363434] rounded-xl py-[22px] px-[40px] flex items-center gap-[9px] text-[16px] font-medium"
-          href=""
-        >
+        <button className="facebook_btn bg-[#363434] rounded-xl py-[22px] px-[40px] flex items-center gap-[9px] text-[16px] font-medium">
           Facebook
         </button>
         <button
