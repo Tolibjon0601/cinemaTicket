@@ -8,6 +8,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+
+
+
 const MySwiper = () => {
   return (
     <div className="container mx-auto ">
@@ -22,8 +25,8 @@ const MySwiper = () => {
       >
         <SwiperSlide>
         <div className=" h-[640px] rounded-xl ml-3 ">
-           {/* <img src="./image/main_swiperImg.svg" alt="" /> */}
-           <iframe width="996" height="560" src="https://www.youtube.com/embed/OoLf55vpRLQ" title="iPhone 16 Pro Max - Ochib ko&#39;ramiz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           <img src="./image/main_swiperImg.svg" alt="" />
+
    </div>
         </SwiperSlide>
         <SwiperSlide>

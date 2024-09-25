@@ -1,19 +1,19 @@
 import React from "react";
 import Header from "../../assets/components/header";
 import Footer from "../../assets/components/footer";
-
 import MainSwiper from "../../pages/home/swiper";
-import LoginPage from "../../pages/home/login";
-import AuthPage from "../../pages/home/AuthPage";
+import { Outlet } from "react-router-dom";
+import MySwiper from "../../pages/home";
 
-const MainLayout = (props) => {
+const MainLayout = () => {
   return (
     <div className="container max-w-[1360px] mx-auto text-white flex flex-col min-h-screen">
       <Header />
-      <div className="flex-grow ">{props?.children}</div>
+      <div className="flex-grow">
+        <Outlet />
+        <MySwiper/>
+      </div>
       <MainSwiper />
-      <LoginPage/>
-      <AuthPage/>
       <Footer />
     </div>
   );
