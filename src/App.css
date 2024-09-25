@@ -1,23 +1,31 @@
 body{
   background-color: #1E1E1E;
 }
-.container{
-  width: 1240px;
+
+.auth_input::before {
+  content: "";
+  background-image: url(../public/image/flag_icon.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  display: block;
+
 }
-/* .swiper-button-next,
-.swiper-button-prev {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
+.facebook_btn::before{
+  content: "";
+  background-image: url(../public/image/icon_facebook.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  display: block;
+
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
+.google_btn::before{
+  content: "";
+  background-image: url(../public/image/icon_google.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  display: block;
 }
-
-.swiper-button-next::after, .swiper-button-prev::after {
-  font-size: 12px; } */

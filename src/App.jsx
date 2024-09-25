@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 import './App.css'
-import MainLayout from './layouts/main_layouts'
+import MainLayout from './layouts/main_layouts/layout'
 import HomePage from './pages/home'
 
 

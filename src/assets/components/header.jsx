@@ -1,5 +1,12 @@
+import { useState } from "react";
 
 const Header = () => {
+
+  const [button,setbutton] = useState(false);
+
+  const changebutton=()=>{
+    setbutton(true);
+  }
   return (
     <>
       <header className="py-[22px] flex  items-center justify-between">
@@ -27,8 +34,10 @@ const Header = () => {
             <option  value="">Ру</option>
             <option  value="">Uz</option>
           </select>
-<button className="py-[22px] px-[66px] bg-main_color rounded-xl font-medium text-lg text-white">Войти</button>
+
         </div>
+      <button onClick={changebutton} className="py-[22px] px-[66px] bg-main_color rounded-xl font-medium text-lg text-white">Войти</button>?
+
       </header>
     </>
   );

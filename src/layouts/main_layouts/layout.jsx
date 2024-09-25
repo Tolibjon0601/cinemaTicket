@@ -3,6 +3,8 @@ import Header from "../../assets/components/header";
 import Footer from "../../assets/components/footer";
 
 import MainSwiper from "../../pages/home/swiper";
+import LoginPage from "../../pages/home/login";
+import AuthPage from "../../pages/home/AuthPage";
 
 const MainLayout = (props) => {
   return (
@@ -10,6 +12,8 @@ const MainLayout = (props) => {
       <Header />
       <div className="flex-grow ">{props?.children}</div>
       <MainSwiper />
+      <LoginPage/>
+      <AuthPage/>
       <Footer />
     </div>
   );
