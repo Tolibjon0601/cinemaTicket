@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 import InputMask from "react-input-mask";
 
 const LoginPage = () => {
+
+
+
   return (
+
     <div className="text-center">
       <h1 className="font-medium text-[32px] pt-12 mb-4">Регистрация</h1>
       <p className="text-[#777] max-w-[300px] mx-auto mb-8">
@@ -20,7 +24,7 @@ const LoginPage = () => {
         </InputMask>
 
         <Link to="/authPage">
-          <button className="py-4 px-[176px] bg-main_color rounded-xl text-xl mb-6 font-medium">
+          <button  className="py-4 px-[176px] bg-main_color rounded-xl text-xl mb-6 font-medium">
             Регистрация
           </button>
         </Link>
