@@ -10,6 +10,7 @@ import "swiper/css/thumbs";
 
 
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import ToggleBtn from "./toggleBtn";
 
 const MySwiper = () => {
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -82,6 +83,7 @@ const MySwiper = () => {
 					/>
 				</SwiperSlide>
 			</Swiper>
+			<ToggleBtn/>
 		</>
 	);
 };
