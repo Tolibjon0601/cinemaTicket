@@ -4,65 +4,62 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import useFetchData from "../../assets/hooks/useFetchData";
+import { ToastContainer } from "react-toastify";
 
 function MainSwiper() {
+
+  const { movies, loading, error } = useFetchData("https://66ceca18901aab24841f8da1.mockapi.io/api/ecomerce");
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-[400px]">
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex justify-center items-center h-[400px] text-red-700 uppercase">
+        <p>{error}</p>
+      </div>
+    );
+  }
+
   return (
     <div className="container pl-9 pt-[116px] relative">
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
         navigation
         pagination={{ clickable: true }}
-        spaceBetween={15}
+        spaceBetween={20}
         slidesPerView={4}
         loop={true}
         autoplay={{
-          delay: 1000,
+          delay: 3000,
           pauseOnMouseEnter: true,
-          disableOnInteraction: false
-         }}
+          disableOnInteraction: false,
+        }}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="h-auto">
-            <div className="w-[280px] h-[400px] bg-slate-700 rounded-xl mb-2"></div>
-            <h2 className="font-medium text-2xl text-white">
-              Kung Fu Panda 4 ENGLISH
-            </h2>
-            <p className="text-text_janr text-sm font-medium">
-              Комедия, Фэнтези
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-auto">
-            <div className="w-[280px] h-[400px] bg-slate-700 rounded-xl mb-2"></div>
-            <h2 className="font-medium text-2xl text-white">Dune 2 – EN</h2>
-            <p className="text-text_janr text-sm font-medium">
-              Фантастика, Боевик
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-auto">
-            <div className="w-[280px] h-[400px] bg-slate-700 rounded-xl mb-2"></div>
-            <h2 className="font-medium text-2xl text-white">Дюна – RU</h2>
-            <p className="text-text_janr text-sm font-medium">
-              Фантастика, Боевик
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-auto">
-            <div className="w-[280px] h-[400px] bg-slate-700 rounded-xl mb-2"></div>
-            <h2 className="font-medium text-2xl text-white">
-              Kung Fu Panda 4 RUSSIAN
-            </h2>
-            <p className="text-text_janr text-sm font-medium">
-              Комедия, Фэнтези
-            </p>
-          </div>
-        </SwiperSlide>
+        {movies.map((movie) => (
+          <SwiperSlide key={movie.id}>
+            <div className="h-auto">
+              <img
+                src={movie.image}
+                alt={movie.title}
+                className="w-[280px] h-[400px] rounded-xl mb-2 object-cover"
+              />
+              <h2 className="font-medium text-2xl text-white">{movie.title}</h2>
+              <p className="text-white text-sm font-medium mt-2">
+                {movie.description}
+              </p>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
+      <ToastContainer />
     </div>
   );
 }
