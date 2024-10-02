@@ -6,8 +6,12 @@ import AuthPage from "./pages/home/authPage";
 import SeansPage from "./pages/home/seansPage";
 import Ticketpage from "./pages/home/ticketpage";
 import Searchpage from "./pages/home/searchpage";
-import "./App.css";
 import CinemaPage from "./pages/home/cinemapage";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import "./App.css";
+import SinglePage from "./pages/seance/singlepage";
+
+const queryClient = new QueryClient();
 
 function App() {
 	const router = createBrowserRouter([
@@ -43,11 +47,19 @@ function App() {
 					path: "cinemapage",
 					element: <CinemaPage />,
 				},
+				{
+					path: "/movie/:id",
+					element: <SinglePage/>,
+			}
 			],
 		},
 	]);
 
-	return <RouterProvider router={router} />;
+	return (
+		<QueryClientProvider client={queryClient}>
+			<RouterProvider router={router} />
+		</QueryClientProvider>
+	);
 }
 
 export default App;

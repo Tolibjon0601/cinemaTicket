@@ -17,6 +17,8 @@ const MainLayout = () => {
 			{location.pathname !== "/login" && location.pathname !== "/authPage" && <MainSwiper />}
 			{location.pathname !== "/login" && location.pathname !== "/authPage" && <Footer />}
 			{location.pathname !== "/" && location.pathname !== "/cinemapage" && <MainSwiper />}
+			{location.pathname !== "/singlepage" && location.pathname !== "/singlepage" && <MainSwiper />}
+
 
 		</div>
 	);
